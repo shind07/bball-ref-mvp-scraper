@@ -6,18 +6,13 @@ import string, datetime, os, csv, time, random,sys
 SLEEP_TIME = 86000 # 1 day
 SLEEP_TIME_BUFFER = 800 # 15 mins
 
-
 csv_name = 'mvp_probabilities.csv'
 schema = ['Date','Rk','Player','Tm','W','L','W/L%', 'G','GS', 'MP','FG','FGA','FG%','3P','3PA','3P%','2P','2PA','2P%','eFG%', 'FT', 'FTA','FT%', 'ORB','DRB','TRB','AST','STL','BLK','TOV','PF','PTS','Prob%']
-
+url = 'https://www.basketball-reference.com/friv/mvp.html'
 
 def main(*args):
-    url = 'https://www.basketball-reference.com/friv/mvp.html'
 
     while True:
-
-
-
         response = requests.get(url)
         tree = lxml.html.fromstring(response.text)
         #tree = lxml.html.parse('sample.html').getroot()
