@@ -3,7 +3,7 @@ import requests
 import string, datetime, os, csv, time, random,sys
 
 # Set time in between requests
-SLEEP_TIME = 86000 # 2 hours
+SLEEP_TIME = 86000 # 1 day
 SLEEP_TIME_BUFFER = 800 # 15 mins
 
 
